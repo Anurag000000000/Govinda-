@@ -1,55 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KuberCric - India's Top Gaming ID</title>
-    <link rel="stylesheet" href="style.css">
+    <title>KuberCric - Get Your ID</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS YAHAN HAI */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        
+        body {
+            background: #000 url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            background-color: #0b1a13;
+            color: white;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            padding: 30px 15px;
+            background: radial-gradient(circle at top, #1a3a2a 0%, #000 70%);
+        }
+
+        .logo-box { margin-bottom: 20px; }
+        .logo-box h2 { color: #f1c40f; font-size: 28px; letter-spacing: 2px; text-shadow: 0 0 10px #f1c40f; }
+        .tagline { font-size: 10px; letter-spacing: 3px; color: #aaa; margin-top: 5px; }
+
+        .hero-title { font-size: 30px; font-weight: 900; margin: 25px 0; line-height: 1.2; }
+        .hero-title span { color: #2ecc71; }
+
+        .info-bar { font-size: 11px; color: #888; margin-bottom: 30px; font-weight: bold; }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .card i { font-size: 20px; color: #f1c40f; }
+
+        .card.full { grid-column: span 2; justify-content: center; background: rgba(241, 196, 15, 0.1); border-color: #f1c40f; }
+
+        .cta-box { margin-top: 40px; }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(180deg, #2ecc71, #27ae60);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+            animation: pulse 1.5s infinite;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .stats { margin-top: 20px; color: #2ecc71; font-size: 13px; font-weight: bold; }
+        .limited { color: #e74c3c; font-size: 11px; margin-top: 5px; }
+
+        /* Notification Popup */
+        #popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 100;
+            width: 90%;
+            max-width: 350px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="main-container">
-        <div class="logo-section">
-            <img src="https://i.ibb.co/v4yZgS6/kuber-logo.png" alt="KuberCric Logo" class="logo">
+    <div class="container">
+        <div class="logo-box">
+            <h2>KUBER<span style="color:white">CRIC</span></h2>
             <p class="tagline">INDIA'S TOP GAMING ID PLATFORM</p>
         </div>
 
-        <div class="hero-text">
-            <h1>PLAY. <span>WIN.</span> CASH OUT.</h1>
-            <div class="features">
-                <span>3000+ GAMES</span> • <span>INSTANT CASHOUT</span> • <span>24/7 SUPPORT</span>
-            </div>
+        <div class="hero-title">
+            PLAY. <span>WIN.</span> CASH OUT.
         </div>
 
-        <div class="bonus-container">
-            <div class="bonus-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1041/1041888.png" alt="bonus">
-                <p>10% WELCOME BONUS</p>
-            </div>
-            <div class="bonus-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2654/2654416.png" alt="spins">
-                <p>50 FREE SPINS</p>
-            </div>
-            <div class="bonus-card deposit">
-                <img src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png" alt="deposit">
-                <p>2% DEPOSIT BONUS</p>
-            </div>
+        <div class="info-bar">
+            3000+ GAMES &bull; INSTANT CASHOUT &bull; 24/7 SUPPORT
         </div>
 
-        <div class="cta-section">
-            <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-btn" id="subscribeBtn">
-                <i class="fab fa-whatsapp"></i> GET YOUR ID ON WHATSAPP
-            </a>
-            <p class="claim-text">1,084 players claimed their bonus today</p>
-            <p class="limited-offer">🔥 Limited-time bonus active now</p>
-        </div>
-
-        <div id="notification" class="notification">
-            <span id="notif-text"></span>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="bonus-grid">
+            <div class="card">
